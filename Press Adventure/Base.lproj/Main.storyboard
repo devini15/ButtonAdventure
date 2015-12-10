@@ -1,25 +1,674 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AIy-SV-nIs">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Press_Adventure" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2ve-Wo-ysG">
+                                <rect key="frame" x="234" y="284" width="258" height="268"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Hello and welcome to Press Adventure: My attempt at a  button based "choose your own adventure" game. It's my first game and is probably not that good but why not give it a shot?</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-mB-RFb">
+                                <rect key="frame" x="292" y="584" width="81" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                                <connections>
+                                    <segue destination="mZ8-Y2-OAG" kind="show" id="7Fw-sr-V36"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="L92-MN-eAF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1250" y="337"/>
+        </scene>
+        <!--Name View Controller-->
+        <scene sceneID="txI-OQ-6Mp">
+            <objects>
+                <viewController id="mZ8-Y2-OAG" customClass="NameViewController" customModule="Press_Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tu2-JQ-g9y"/>
+                        <viewControllerLayoutGuide type="bottom" id="GmH-Rc-gD3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6zZ-iJ-biR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NY4-A7-JSK">
+                                <rect key="frame" x="336" y="497" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLN-Mb-v18">
+                                <rect key="frame" x="364" y="566" width="40" height="30"/>
+                                <state key="normal" title="&gt;OK&gt;"/>
+                                <connections>
+                                    <segue destination="b3e-fN-AYM" kind="show" id="4sI-Gi-evQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="playerTextField" destination="NY4-A7-JSK" id="Fn8-fS-plw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qki-h0-WFF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2101" y="337"/>
+        </scene>
+        <!--Game Over View Controller-->
+        <scene sceneID="kcL-Zk-Jr1">
+            <objects>
+                <viewController id="su2-ec-Y6g" customClass="GameOverViewController" customModule="Press_Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Mid-NC-fvF"/>
+                        <viewControllerLayoutGuide type="bottom" id="PR0-oP-Hiq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PKS-N1-b47">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Game Over" translatesAutoresizingMaskIntoConstraints="NO" id="SwA-J9-J19">
+                                <rect key="frame" x="20" y="333" width="728" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IIi-jK-Qmq">
+                                <rect key="frame" x="305" y="664" width="159" height="50"/>
+                                <state key="normal" image="Continue"/>
+                                <connections>
+                                    <segue destination="b3e-fN-AYM" kind="show" id="e1U-Mb-Si5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p3R-Gi-oyL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2980" y="-943"/>
+        </scene>
+        <!--First Room View Controller-->
+        <scene sceneID="8UH-uV-gaS">
+            <objects>
+                <viewController id="b3e-fN-AYM" customClass="FirstRoomViewController" customModule="Press_Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q9w-Cx-qaB"/>
+                        <viewControllerLayoutGuide type="bottom" id="NFm-m4-cnD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0mG-9G-M3j">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-sq-U0f">
+                                <rect key="frame" x="322" y="705" width="40" height="30"/>
+                                <state key="normal" title="Leave"/>
+                                <connections>
+                                    <segue destination="NbM-hR-U1h" kind="show" id="FIs-HP-zGt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEE-FX-hYf">
+                                <rect key="frame" x="327" y="758" width="31" height="30"/>
+                                <state key="normal" title="Wait"/>
+                                <connections>
+                                    <segue destination="F0x-MD-63l" kind="show" id="HXK-Xs-8kU"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="w7j-Gw-Qpv">
+                                <rect key="frame" x="165" y="373" width="424" height="289"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">You awaken in a dark room due to an anoying beeping sound, you are verry confused until you realize  that this is in fact your bedroom the power appears to be out as you can not see the glowing display on your alarm clock but judging by the darkness it must be pretty early. You grope around on your night stand until you can find your watch (which you find to be the source of the beeping) and put it on you press the "INDIGLO" button and the time is illuminated in soft green light. It's 7:00 AM (your vision is still blurry from wakeing up so you can't make out the date) this is strange because you can see litterally nothing in the room around you exept for when you use your indiglo but that is hardly useful at all. And you can't remember setting an alarm on your watch either but you wouldn't put it past yourself as you know yourself to be a verry forgetful person.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JUz-ia-xvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2986" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lni-jr-lLJ">
+            <objects>
+                <viewController id="NbM-hR-U1h" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0OR-5G-d9M"/>
+                        <viewControllerLayoutGuide type="bottom" id="7So-Br-4lT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mS5-Qa-BTR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rXQ-SF-Jhz">
+                                <rect key="frame" x="264" y="420" width="240" height="178"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You figure that the only way out is to try to find out whats going on. you fumble around in the dark a bit until you find your doorknob, take a deep breath and turn it. You step out into the hall on top of the stairs, not much is different here, still pitch dark.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9T-CD-fEJ">
+                                <rect key="frame" x="324" y="701" width="98" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <state key="normal" title="Use Bathroom"/>
+                                <connections>
+                                    <segue destination="Jof-Yl-qMo" kind="show" id="KAH-kA-hhL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecW-gf-qlv">
+                                <rect key="frame" x="326" y="747" width="95" height="30"/>
+                                <state key="normal" title="Retrieve Food"/>
+                                <connections>
+                                    <segue destination="f8H-AX-nq9" kind="show" id="tlL-F5-Nvi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7UF-fj-wpT">
+                                <rect key="frame" x="326" y="796" width="96" height="30"/>
+                                <state key="normal" title="Find Fuse Box"/>
+                                <connections>
+                                    <segue destination="rXb-H4-wD8" kind="show" id="w7Q-a9-j1a"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HZw-pT-Pml" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="7fx-rZ-jOm">
+            <objects>
+                <viewController id="dHg-QR-MW5" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XMq-b9-XRV"/>
+                        <viewControllerLayoutGuide type="bottom" id="DjA-im-5uA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Sn8-6b-fmL">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oCw-wg-Dun">
+                                <rect key="frame" x="264" y="448" width="240" height="133"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You verry carefully make your way downstairs to the fuse box. You can't read it by the feeble light that your watch gives off so you figure things can't get any darker, you feel around for the MAIN FUSE and press it.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hd5-7y-rfl">
+                                <rect key="frame" x="344" y="673" width="81" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                                <connections>
+                                    <segue destination="tdc-u9-PBe" kind="show" id="Jmd-AY-5kX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rAp-LJ-o14" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6fa-Lj-vZI">
+            <objects>
+                <viewController id="tdc-u9-PBe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hFi-yf-IvQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="hzh-eg-lNg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="j6O-xl-mHp">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Fhs-yO-jyG">
+                                <rect key="frame" x="264" y="420" width="240" height="152"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You are startled by a sudden burst of white light. Eventually you realize that the fuse has simply replaced the black with light, what even was the point of this? Well, you were ready for a change in enviroment anyway so you may  as well leave it this way.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54H-Lj-NT1">
+                                <rect key="frame" x="369" y="720" width="31" height="30"/>
+                                <state key="normal" title="Wait"/>
+                                <connections>
+                                    <segue destination="9nO-kH-8MH" kind="show" id="Y4N-jI-x5x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQq-Nb-MRv">
+                                <rect key="frame" x="344" y="675" width="81" height="30"/>
+                                <state key="normal" title="Go Upstairs"/>
+                                <connections>
+                                    <segue destination="jZG-La-zvw" kind="show" id="NpM-ie-HTh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h0Y-es-kBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5507" y="337"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="sAA-ds-dqf">
+            <objects>
+                <viewController id="9nO-kH-8MH" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i7r-14-XGy"/>
+                        <viewControllerLayoutGuide type="bottom" id="fPG-g5-9yM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aSo-I5-MH6">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Fuse Box BW" translatesAutoresizingMaskIntoConstraints="NO" id="40m-rO-ZEt">
+                                <rect key="frame" x="232" y="324" width="304" height="375"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jnf-Ee-EHO">
+                                <rect key="frame" x="192" y="442" width="385" height="139"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.71999999999999997" colorSpace="calibratedRGB"/>
+                                <string key="text">You wait for a while and your vision seems to fade to a grayscale. You are confused to see your fuse box is different, asside from the rest of your house being seemingly identical. There appear to mean two main fuses, one is black, one is white. Both are in the on position you must have just pressed one now. There also appears to be 6 smaller fuses but all of them are missing.</string>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SyW-Lc-fhT">
+                                <rect key="frame" x="317" y="745" width="135" height="30"/>
+                                <state key="normal" title="Turn Off Black Fuse"/>
+                                <connections>
+                                    <segue destination="l2b-6t-ueI" kind="show" id="1uT-y1-dGM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tS1-QA-Bvz">
+                                <rect key="frame" x="315" y="783" width="138" height="30"/>
+                                <state key="normal" title="Turn Off White Fuse"/>
+                                <connections>
+                                    <segue destination="JZW-7d-kte" kind="show" id="4Ag-ug-J7A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95v-fF-FTb">
+                                <rect key="frame" x="369" y="821" width="30" height="30"/>
+                                <state key="normal" title="Exit"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HQB-X5-suO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5507" y="1417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wD9-yT-3QD">
+            <objects>
+                <viewController id="JZW-7d-kte" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="swG-K8-6dS"/>
+                        <viewControllerLayoutGuide type="bottom" id="CPG-Hg-gYE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jrs-Nj-kiE">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You can now only see black again. It would appear that you have quite litterally shut off the color white." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oy7-kl-7Oa">
+                                <rect key="frame" x="264" y="475" width="240" height="74"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivu-bf-ANc">
+                                <rect key="frame" x="317" y="745" width="135" height="30"/>
+                                <state key="normal" title="Turn Off Black Fuse"/>
+                                <connections>
+                                    <segue destination="3SM-UO-lT4" kind="show" id="ofd-oQ-aN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0V-lZ-J4R">
+                                <rect key="frame" x="297" y="690" width="174" height="30"/>
+                                <state key="normal" title="Turn White Fuse Back On"/>
+                                <connections>
+                                    <segue destination="9nO-kH-8MH" kind="show" id="X92-WV-54h"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6M0-fQ-zHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5837" y="2545"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l3Q-u2-uyV">
+            <objects>
+                <viewController id="l2b-6t-ueI" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="liV-2M-mRs"/>
+                        <viewControllerLayoutGuide type="bottom" id="akT-qt-QVq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sKM-Op-s1d">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="You can now only see white again. It would appear that you have quite litterally shut off the color black." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dVt-r1-37t">
+                                <rect key="frame" x="264" y="448" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R1e-8a-e4U">
+                                <rect key="frame" x="315" y="694" width="138" height="30"/>
+                                <state key="normal" title="Turn Off White Fuse"/>
+                                <connections>
+                                    <segue destination="3SM-UO-lT4" kind="show" id="BJN-5s-lHJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="njF-ms-8TI">
+                                <rect key="frame" x="299" y="643" width="171" height="30"/>
+                                <state key="normal" title="Turn Black Fuse Back On"/>
+                                <connections>
+                                    <segue destination="9nO-kH-8MH" kind="show" id="oF9-8i-bay"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EBv-rf-cvo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5006" y="2545"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="iEt-uo-MX8">
+            <objects>
+                <viewController id="3SM-UO-lT4" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hW5-ff-Gkp"/>
+                        <viewControllerLayoutGuide type="bottom" id="vcS-JK-6DH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sqX-Bd-8Lo">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sva-Iv-zY7">
+                                <rect key="frame" x="256" y="194" width="273" height="173"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="ERROR 404">
+                                        <attributes>
+                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="49" name="Menlo-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DW8-rt-aFu">
+                                <rect key="frame" x="272" y="308" width="240" height="284"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Sorry we could not load the background of this view because It CAN'T EXIST! WHAT WERE YOU THINKING? Please tell me this is a joke. Did you really think you could accomplish anything by shutting off both clolors? What was your PLAN? I would have made that button crash the app but you would probably think that the app was broken as you were umm.... "special" enough to press that button. you realizet that you need to start over now right? I can't BELIEVE you would do that (don't forget to rate this app 5 stars).</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E1Y-54-vyF">
+                                <rect key="frame" x="344" y="670" width="81" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PhY-b1-b24" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5422" y="3669"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="jn2-u3-991">
+            <objects>
+                <viewController id="jZG-La-zvw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8J0-Zl-Uq3"/>
+                        <viewControllerLayoutGuide type="bottom" id="lLf-e7-UCA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RzT-Te-Ui5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Hallway BW" translatesAutoresizingMaskIntoConstraints="NO" id="8lc-Pf-UpD">
+                                <rect key="frame" x="195" y="384" width="349" height="255"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="rEM-NO-AbH">
+                                <rect key="frame" x="259" y="428" width="240" height="167"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <string key="text">You stumble your way up the stairs and into the hallway, shortly after you reach the top, your vision seems to fade to greyscale. If you had known this would happen you would have waited in the basement and avoided the struggle of climbing the stairs but you survived so whatever.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ezQ-HP-wJ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5507" y="-798"/>
+        </scene>
+        <!--Bathroom-->
+        <scene sceneID="RBp-wI-8GC">
+            <objects>
+                <viewController title="Bathroom" id="Jof-Yl-qMo" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HUl-eS-AV4"/>
+                        <viewControllerLayoutGuide type="bottom" id="NWO-dX-pQp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FQI-jA-TdO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oRB-3A-H1j">
+                                <rect key="frame" x="264" y="453" width="240" height="117"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Yes this was a good idea, you always go in the bathroom in the morning and this should be no exeption. You may be in a crisis but it's hard to think when you have to go.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bri-42-fIl">
+                                <rect key="frame" x="337" y="727" width="95" height="30"/>
+                                <state key="normal" title="Retrieve Food"/>
+                                <connections>
+                                    <segue destination="f8H-AX-nq9" kind="show" id="EBa-IO-vu3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4nc-kF-Wvg">
+                                <rect key="frame" x="336" y="756" width="96" height="30"/>
+                                <state key="normal" title="Find Fuse Box"/>
+                                <connections>
+                                    <segue destination="dHg-QR-MW5" kind="show" id="kJa-wD-aci"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZL1-Zx-MmI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="1417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kWz-so-fCw">
+            <objects>
+                <viewController id="rXb-H4-wD8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0pE-7b-Qvl"/>
+                        <viewControllerLayoutGuide type="bottom" id="n3N-2n-DEw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Y7A-Td-lH0">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-nR-bGS">
+                                <rect key="frame" x="344" y="632" width="81" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                                <connections>
+                                    <segue destination="dHg-QR-MW5" kind="show" id="Ury-A7-e4o"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9zp-qM-bxU">
+                                <rect key="frame" x="264" y="448" width="240" height="128"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You'll probably regret not takeing that bathroom break but you have more pressing matters to handle. Besides, if worse come to worst, well... you'll adress that issue when it approaches.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96C-2n-Ir4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4680" y="1417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="J7J-QC-3ZF">
+            <objects>
+                <viewController id="f8H-AX-nq9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mdC-Uv-6TZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Cm-h4-Mie"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PHa-5D-Qm4">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="VcJ-i0-vcU">
+                                <rect key="frame" x="264" y="448" width="240" height="167"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You're pretty hungry so you decide to eat something. I looks like you've got a long day ahead of you so you may as well be saturated. Unfourtonatley, you slip in a puddle in the darkness and bang your head on the corner of the counter. You are starting to seriously regret this decision</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO7-W4-Gy5">
+                                <rect key="frame" x="344" y="692" width="81" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                                <connections>
+                                    <segue destination="su2-ec-Y6g" kind="show" id="dPn-g7-1Fl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os5-iw-MBo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3862" y="2562"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="S74-Oo-neX">
+            <objects>
+                <viewController id="F0x-MD-63l" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wSf-uj-Wrw"/>
+                        <viewControllerLayoutGuide type="bottom" id="7c7-Gj-QxH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ahG-dg-bsa">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dWh-Co-AB3">
+                                <rect key="frame" x="230" y="391" width="308" height="242"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You find this strange and figure you might be dreaming. You decide that the safest thing to do might be to simply wait until something happens. You fall asleep and when you wake up you check your watch it reads 12:00PM. You were hoping something would happen but it seems quite evident that nothing is going to change anytime soon. You set your watch alarm for 7:00AM to give yourself time to think and sleep and to have a full day tomarrow to figure this out (if day's still happen in this darkness).</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FcB-cv-j0U">
+                                <rect key="frame" x="344" y="723" width="81" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                                <connections>
+                                    <segue destination="b3e-fN-AYM" kind="show" id="gSO-Rt-sFj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wFy-nQ-4M0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2986" y="1417"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MQG-QX-zeh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AIy-SV-nIs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n6z-Uq-nAi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Rvy-5R-bJk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pxz-lE-JXK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="390" y="337"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Continue" width="159" height="50"/>
+        <image name="Fuse Box BW" width="314" height="387"/>
+        <image name="Game Over" width="876" height="103"/>
+        <image name="Hallway BW" width="587" height="336"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="e1U-Mb-Si5"/>
+        <segue reference="tlL-F5-Nvi"/>
+        <segue reference="kJa-wD-aci"/>
+        <segue reference="X92-WV-54h"/>
+        <segue reference="ofd-oQ-aN6"/>
+    </inferredMetricsTieBreakers>
 </document>
