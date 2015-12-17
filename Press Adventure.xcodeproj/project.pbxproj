@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7693A541BF67D1C004DD093 /* FirstRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7693A531BF67D1C004DD093 /* FirstRoomViewController.swift */; };
+		D7693A561BF67DDE004DD093 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7693A551BF67DDE004DD093 /* GameOverViewController.swift */; };
 		D7850EB01BF3DD4D00D16939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850EAF1BF3DD4D00D16939 /* AppDelegate.swift */; };
 		D7850EB21BF3DD4D00D16939 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850EB11BF3DD4D00D16939 /* ViewController.swift */; };
 		D7850EB51BF3DD4D00D16939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7850EB31BF3DD4D00D16939 /* Main.storyboard */; };
@@ -14,6 +16,7 @@
 		D7850EBA1BF3DD4E00D16939 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7850EB81BF3DD4E00D16939 /* LaunchScreen.storyboard */; };
 		D7850EC51BF3DD4E00D16939 /* Press_AdventureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850EC41BF3DD4E00D16939 /* Press_AdventureTests.swift */; };
 		D7850ED01BF3DD4E00D16939 /* Press_AdventureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850ECF1BF3DD4E00D16939 /* Press_AdventureUITests.swift */; };
+		D7850EDE1BF3DF0900D16939 /* NameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850EDD1BF3DF0900D16939 /* NameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D7693A531BF67D1C004DD093 /* FirstRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRoomViewController.swift; sourceTree = "<group>"; };
+		D7693A551BF67DDE004DD093 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
 		D7850EAC1BF3DD4D00D16939 /* Press Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Press Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7850EAF1BF3DD4D00D16939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7850EB11BF3DD4D00D16939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		D7850ECB1BF3DD4E00D16939 /* Press AdventureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Press AdventureUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7850ECF1BF3DD4E00D16939 /* Press_AdventureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Press_AdventureUITests.swift; sourceTree = "<group>"; };
 		D7850ED11BF3DD4E00D16939 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7850EDD1BF3DF0900D16939 /* NameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,9 @@
 				D7850EAF1BF3DD4D00D16939 /* AppDelegate.swift */,
 				D7850EB11BF3DD4D00D16939 /* ViewController.swift */,
 				D7850EB31BF3DD4D00D16939 /* Main.storyboard */,
+				D7693A551BF67DDE004DD093 /* GameOverViewController.swift */,
+				D7693A531BF67D1C004DD093 /* FirstRoomViewController.swift */,
+				D7850EDD1BF3DF0900D16939 /* NameViewController.swift */,
 				D7850EB61BF3DD4D00D16939 /* Assets.xcassets */,
 				D7850EB81BF3DD4E00D16939 /* LaunchScreen.storyboard */,
 				D7850EBB1BF3DD4E00D16939 /* Info.plist */,
@@ -256,8 +265,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7693A541BF67D1C004DD093 /* FirstRoomViewController.swift in Sources */,
 				D7850EB21BF3DD4D00D16939 /* ViewController.swift in Sources */,
 				D7850EB01BF3DD4D00D16939 /* AppDelegate.swift in Sources */,
+				D7850EDE1BF3DF0900D16939 /* NameViewController.swift in Sources */,
+				D7693A561BF67DDE004DD093 /* GameOverViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +496,7 @@
 				D7850ED61BF3DD4E00D16939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7850ED71BF3DD4E00D16939 /* Build configuration list for PBXNativeTarget "Press AdventureTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +505,7 @@
 				D7850ED91BF3DD4E00D16939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D7850EDA1BF3DD4E00D16939 /* Build configuration list for PBXNativeTarget "Press AdventureUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +514,7 @@
 				D7850EDC1BF3DD4E00D16939 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
