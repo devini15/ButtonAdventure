@@ -24,9 +24,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-mB-RFb">
-                                <rect key="frame" x="292" y="584" width="81" height="30"/>
-                                <state key="normal" title="&gt;Continue&gt;"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Pg-mB-RFb">
+                                <rect key="frame" x="274" y="574" width="119" height="50"/>
+                                <state key="normal" image="Begin"/>
                                 <connections>
                                     <segue destination="mZ8-Y2-OAG" kind="show" id="7Fw-sr-V36"/>
                                 </connections>
@@ -317,8 +317,15 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="95v-fF-FTb">
-                                <rect key="frame" x="369" y="821" width="30" height="30"/>
+                                <rect key="frame" x="369" y="849" width="30" height="30"/>
                                 <state key="normal" title="Exit"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQv-sA-Zib">
+                                <rect key="frame" x="326" y="818" width="116" height="30"/>
+                                <state key="normal" title="Dismantle Watch"/>
+                                <connections>
+                                    <segue destination="3n5-n7-Qfa" kind="show" id="nzo-DA-j77"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -328,6 +335,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HQB-X5-suO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5507" y="1417"/>
+        </scene>
+        <!--Watch View Controller-->
+        <scene sceneID="rth-I6-R08">
+            <objects>
+                <viewController id="3n5-n7-Qfa" customClass="watchViewController" customModule="Press_Adventure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="X5u-GA-bwc"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ma-qw-5YH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wX3-yT-cOV">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EnG-Hz-SXw">
+                                <rect key="frame" x="264" y="448" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">You open the back of your watch and see the jumble of gears or whatever on the inside. You don't really know much about watches but hopefully this one can serve your purposes. </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frT-bc-VKf">
+                                <rect key="frame" x="317" y="655" width="88" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lowercase" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJj-Mf-stb">
+                                <rect key="frame" x="313" y="706" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx4-UK-aQX">
+                                <rect key="frame" x="337" y="771" width="48" height="30"/>
+                                <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="searchButton:" destination="3n5-n7-Qfa" eventType="touchUpInside" id="na9-uE-I4u"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRh-4U-8ew">
+                                <rect key="frame" x="347" y="974" width="30" height="30"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okj-td-5IQ">
+                                <rect key="frame" x="283" y="821" width="159" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="ContinueButton" destination="aRh-4U-8ew" id="s5o-GQ-jje"/>
+                        <outlet property="watchTextField" destination="PJj-Mf-stb" id="3I0-Zl-TNK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4f-kq-hNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6328" y="1417"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wD9-yT-3QD">
@@ -659,6 +725,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Begin" width="119" height="50"/>
         <image name="Continue" width="159" height="50"/>
         <image name="Fuse Box BW" width="314" height="387"/>
         <image name="Game Over" width="876" height="103"/>

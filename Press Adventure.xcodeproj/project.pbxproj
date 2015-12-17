@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D7693A541BF67D1C004DD093 /* FirstRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7693A531BF67D1C004DD093 /* FirstRoomViewController.swift */; };
 		D7693A561BF67DDE004DD093 /* GameOverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7693A551BF67DDE004DD093 /* GameOverViewController.swift */; };
+		D771827F1C23546200F007F6 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D771827E1C23546200F007F6 /* WatchViewController.swift */; };
 		D7850EB01BF3DD4D00D16939 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850EAF1BF3DD4D00D16939 /* AppDelegate.swift */; };
 		D7850EB21BF3DD4D00D16939 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7850EB11BF3DD4D00D16939 /* ViewController.swift */; };
 		D7850EB51BF3DD4D00D16939 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7850EB31BF3DD4D00D16939 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* Begin PBXFileReference section */
 		D7693A531BF67D1C004DD093 /* FirstRoomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstRoomViewController.swift; sourceTree = "<group>"; };
 		D7693A551BF67DDE004DD093 /* GameOverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverViewController.swift; sourceTree = "<group>"; };
+		D771827E1C23546200F007F6 /* WatchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		D7850EAC1BF3DD4D00D16939 /* Press Adventure.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Press Adventure.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7850EAF1BF3DD4D00D16939 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7850EB11BF3DD4D00D16939 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				D7850EAF1BF3DD4D00D16939 /* AppDelegate.swift */,
 				D7850EB11BF3DD4D00D16939 /* ViewController.swift */,
 				D7850EB31BF3DD4D00D16939 /* Main.storyboard */,
+				D771827E1C23546200F007F6 /* WatchViewController.swift */,
 				D7693A551BF67DDE004DD093 /* GameOverViewController.swift */,
 				D7693A531BF67D1C004DD093 /* FirstRoomViewController.swift */,
 				D7850EDD1BF3DF0900D16939 /* NameViewController.swift */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D771827F1C23546200F007F6 /* WatchViewController.swift in Sources */,
 				D7693A541BF67D1C004DD093 /* FirstRoomViewController.swift in Sources */,
 				D7850EB21BF3DD4D00D16939 /* ViewController.swift in Sources */,
 				D7850EB01BF3DD4D00D16939 /* AppDelegate.swift in Sources */,
