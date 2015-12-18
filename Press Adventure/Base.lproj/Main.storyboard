@@ -356,44 +356,76 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search For:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="frT-bc-VKf">
-                                <rect key="frame" x="317" y="655" width="88" height="21"/>
+                                <rect key="frame" x="340" y="651" width="88" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lowercase" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PJj-Mf-stb">
-                                <rect key="frame" x="313" y="706" width="97" height="30"/>
+                                <rect key="frame" x="336" y="702" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yx4-UK-aQX">
-                                <rect key="frame" x="337" y="771" width="48" height="30"/>
+                                <rect key="frame" x="360" y="769" width="48" height="30"/>
                                 <state key="normal" title="Search"/>
                                 <connections>
                                     <action selector="searchButton:" destination="3n5-n7-Qfa" eventType="touchUpInside" id="na9-uE-I4u"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRh-4U-8ew">
-                                <rect key="frame" x="347" y="974" width="30" height="30"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okj-td-5IQ">
-                                <rect key="frame" x="283" y="821" width="159" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="okj-td-5IQ">
+                                <rect key="frame" x="68" y="821" width="632" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRh-4U-8ew">
+                                <rect key="frame" x="39" y="119" width="150" height="30"/>
+                                <state key="normal" title="&gt;Continue&gt;"/>
+                                <connections>
+                                    <segue destination="A0X-c9-hrj" kind="show" id="MTs-qe-ZDo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="ContinueButton" destination="aRh-4U-8ew" id="s5o-GQ-jje"/>
+                        <outlet property="continueButton" destination="aRh-4U-8ew" id="3re-bg-BTM"/>
+                        <outlet property="outPutLabel" destination="okj-td-5IQ" id="zQI-ci-eyg"/>
                         <outlet property="watchTextField" destination="PJj-Mf-stb" id="3I0-Zl-TNK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4f-kq-hNk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6328" y="1417"/>
+            <point key="canvasLocation" x="6322" y="1417"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Nkc-IQ-cnc">
+            <objects>
+                <viewController id="A0X-c9-hrj" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P31-E3-YUY"/>
+                        <viewControllerLayoutGuide type="bottom" id="TNB-jx-NIh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="c3p-2t-bfY">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Sure enough, your watch has a color fuse for the INDIGLO. unfortunately, this can be of no use to you as it is watch-sized." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yvk-mq-LdD">
+                                <rect key="frame" x="339" y="389" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NNX-EI-vWd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7124" y="1417"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="wD9-yT-3QD">
